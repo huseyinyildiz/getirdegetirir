@@ -14,9 +14,11 @@
             <div class="image">
                 <img src="{{asset('assets')}}/admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
+            @auth
             <div class="info">
-                <a href="#" class="d-block">Alexander Pierce</a>
+                <a href="#" class="d-block">{{Auth::user()->name}}</a>
             </div>
+                @endauth
         </div>
 
         <!-- Sidebar Menu -->
